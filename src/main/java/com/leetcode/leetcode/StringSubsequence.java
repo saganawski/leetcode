@@ -1,7 +1,5 @@
 package com.leetcode.leetcode;
 
-import java.util.Map;
-
 public class StringSubsequence {
     public static void main(String[] args) {
         final String s = "abc";
@@ -32,3 +30,25 @@ public class StringSubsequence {
         return sIndex == s.length();
     }
 }
+
+
+/*
+* chat gpt 2 pointer solution
+*
+* private static boolean isSubsequence(String s, String t) {
+        int sPointer = 0, tPointer = 0;
+
+        while (sPointer < s.length() && tPointer < t.length()) {
+            // If characters match, move both pointers
+            if (s.charAt(sPointer) == t.charAt(tPointer)) {
+                sPointer++;
+            }
+            // Always move the tPointer
+            tPointer++;
+        }
+
+        // If sPointer reached the end of s, all characters were found in sequence
+        return sPointer == s.length();
+    }
+*
+* */

@@ -21,6 +21,8 @@ public class ProductArray {
             result[i] *= product;
             product *= nums[i];
         }
+
+
         return result;
     }
 }

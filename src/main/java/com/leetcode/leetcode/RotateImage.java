@@ -49,8 +49,10 @@ public class RotateImage {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length / 2; j++) {
                 int temp = matrix[i][j];
-                matrix[i][j] = matrix[i][matrix[i].length - j - 1];
-                matrix[i][matrix[i].length - j - 1] = temp;
+                int mirrorIndex = matrix[i].length - j - 1;
+                
+                matrix[i][j] = matrix[i][mirrorIndex];
+                matrix[i][mirrorIndex] = temp;
             }
         }
         return matrix;

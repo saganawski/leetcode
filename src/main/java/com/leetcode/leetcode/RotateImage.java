@@ -29,28 +29,37 @@ public class RotateImage {
 
     private static int[][] rotateImage(int[][] matrix) {
         // iterate through the matrix and swap the elements transposing the matrix
+
+        // 1) track beginning index and increment it
+        // 2) loop through the matrix to each row
+        // 3) loop through each row
+        // 4) swap the elements
+        
+        
         int beginIndex = 1;
         for (int i = 0; i < matrix.length -1; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
 
                 if(j >= beginIndex && j < matrix.length){
                     int tempTopRow = matrix[i][j];
-                    int tempSwampLocation = matrix[j][i];
+                    int tempSwapLocation = matrix[j][i];
 
-                    matrix[i][j] = tempSwampLocation;
+                    matrix[i][j] = tempSwapLocation;
                     matrix[j][i] = tempTopRow;
 
                 }
             }
             beginIndex++;
         }
+        // 1) loop through the matrix to each row
+        // 2) loop through each row
+        // 3) reverse the row by half
 
-        // reverse the matrix
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length / 2; j++) {
                 int temp = matrix[i][j];
                 int mirrorIndex = matrix[i].length - j - 1;
-                
+//
                 matrix[i][j] = matrix[i][mirrorIndex];
                 matrix[i][mirrorIndex] = temp;
             }

@@ -20,7 +20,7 @@ public class JewelsAndStones {
 
         int counter = 0;
 
-        if(jewels.length() == 0 || stones.length() == 0){
+        if(jewels.isEmpty() || stones.isEmpty()){
             return 0;
         }
 

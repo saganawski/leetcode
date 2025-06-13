@@ -9,6 +9,8 @@ public class TwoSum2 {
         final int target = 9;
 
         final int[] result = twoSum(given,target);
+        // my solution works but it should have done a 2 pointer solution.
+        // keep in mind that the array is sorted so you know know which index L or R you can adjust compared to target
         System.out.println(Arrays.toString(result));
     }
 
